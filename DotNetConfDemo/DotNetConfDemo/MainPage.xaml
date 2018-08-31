@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DotNetConfDemo"
+             x:Class="DotNetConfDemo.MainPage" BackgroundColor="White">
+
+    <Frame VerticalOptions="Center" HorizontalOptions="Center" HasShadow="True">
+
+        <Grid  ColumnSpacing="0" RowSpacing="0" WidthRequest="300" HeightRequest="255">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"></RowDefinition>
+                <RowDefinition Height="150"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+                
+            </Grid.RowDefinitions>
+            
+            <BoxView Color="Green" HorizontalOptions="Fill" VerticalOptions="Fill"></BoxView>
+
+            <Grid BackgroundColor="White" Grid.Row="1" Padding="20,40">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image Grid.ColumnSpan="3"></Image>
+                
+                <Label Text="Ron Z." FontAttributes="Bold" TextColor="Black"  Grid.Column="1" Grid.Row="0"></Label>
+                <Label Text="Project Manager" TextColor="Black" Grid.Column="1" Grid.Row="1"></Label>
+                <Label Text="Los Angeles, CA" TextColor="LightGray" Grid.Column="1" Grid.Row="2"></Label>
+
+            </Grid>
+
+            <Grid Grid.Row="2" BackgroundColor="LightGray" Padding="20,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Text="$45" FontSize="24"  VerticalTextAlignment="End" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="0"></Label>
+                <Label Text="Hourly Rate" TextColor="DarkGray" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1"></Label>
+                
+                <Label Text="100%" FontSize="24" VerticalTextAlignment="End" FontAttributes="Bold" TextColor="Black" Grid.Column="1" HorizontalTextAlignment="Center" Grid.Row="0"></Label>
+                <Label Text="Job Success" TextColor="DarkGray" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="1"></Label>
+
+                <Label Text="300k+" FontSize="24" VerticalTextAlignment="End" FontAttributes="Bold" TextColor="Black" Grid.Column="2" HorizontalTextAlignment="Center" Grid.Row="0"></Label>
+                <Label Text="Total Earned" LineBreakMode="WordWrap" TextColor="DarkGray" HorizontalTextAlignment="Center" Grid.Column="2" Grid.Row="1"></Label>
+
+            </Grid>
+
+        
+        </Grid>
+        
+    </Frame>
+
+</ContentPage>
