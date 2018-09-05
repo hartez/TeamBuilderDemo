@@ -28,6 +28,12 @@ namespace TeamBuilderDemo
                 new SpaceViewModel("Third Shift Office Rentals", "$675/mo", "97", "2.8", "space7"),
                 new SpaceViewModel("Work In Progress", "$890/mo", "56", "3.9", "space8"),
                 new SpaceViewModel("Desk & Outlet", "$1,200/mo", "87", "3.7", "space9"),
+                new SpaceViewModel("Millenium Coworking", "$1,450/mo", "65", "2.8", "space10"),
+                new SpaceViewModel("Bob's Discount Office Space", "$999/mo", "123", "1.6", "space11"),
+                new SpaceViewModel("Le Studio", "$1,000/mo", "9", "5.0", "space12"),
+                new SpaceViewModel("Maker Camp", "$1,850/mo", "45", "4.7", "space13"),
+                new SpaceViewModel("The Forge", "$1,300/mo", "25", "5.0", "space14"),
+                new SpaceViewModel("Digital ArtHub", "$2,000/mo", "125", "4.8", "space15"),
             };
 
             Spaces.ItemsLayout = new GridItemsLayout(2, ItemsLayoutOrientation.Vertical);

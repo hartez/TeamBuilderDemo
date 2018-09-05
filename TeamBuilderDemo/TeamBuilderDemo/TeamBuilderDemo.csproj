@@ -31,6 +31,12 @@
     <None Remove="Images\SKYPE15_Robert_001.jpg" />
     <None Remove="Images\space0.jpg" />
     <None Remove="Images\space1.jpg" />
+    <None Remove="Images\space10.jpg" />
+    <None Remove="Images\space11.jpg" />
+    <None Remove="Images\space12.jpg" />
+    <None Remove="Images\space13.jpg" />
+    <None Remove="Images\space14.jpg" />
+    <None Remove="Images\space15.jpg" />
     <None Remove="Images\space2.jpg" />
     <None Remove="Images\space3.jpg" />
     <None Remove="Images\space4.jpg" />
@@ -63,6 +69,12 @@
     <EmbeddedResource Include="Images\roberta.jpg" />
     <EmbeddedResource Include="Images\space0.jpg" />
     <EmbeddedResource Include="Images\space1.jpg" />
+    <EmbeddedResource Include="Images\space10.jpg" />
+    <EmbeddedResource Include="Images\space11.jpg" />
+    <EmbeddedResource Include="Images\space12.jpg" />
+    <EmbeddedResource Include="Images\space13.jpg" />
+    <EmbeddedResource Include="Images\space14.jpg" />
+    <EmbeddedResource Include="Images\space15.jpg" />
     <EmbeddedResource Include="Images\space2.jpg" />
     <EmbeddedResource Include="Images\space3.jpg" />
     <EmbeddedResource Include="Images\space4.jpg" />
