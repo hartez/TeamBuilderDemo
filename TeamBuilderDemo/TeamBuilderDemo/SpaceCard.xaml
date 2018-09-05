@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeamBuilderDemo.SpaceCard">
+  <ContentView.Content>
+
+        <Grid ColumnSpacing="0" RowSpacing="0" Margin="5,0,5,20" >
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="133"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Image Source="{Binding ImageSource}" WidthRequest="190" Aspect="AspectFit" />
+            
+            <Label Text="{Binding Name}" FontAttributes="Bold" TextColor="Black" Grid.Row="1" Margin="0,2"></Label>
+            <Label Text="{Binding Cost}" TextColor="Black" Grid.Row="2" Margin="0,2"></Label>
+            
+            <StackLayout Orientation="Horizontal" Grid.Row="3" Margin="0,2">
+                <Label Text="{Binding Rating, StringFormat='{0}/5.0'}" FontSize="Micro" TextColor="Black" Grid.Row="3"></Label> 
+                <Label Text="●" Margin="2,0" FontSize="Micro"></Label>
+                <Label Text="{Binding ReviewCount, StringFormat='based on {0} reviews'}" FontSize="Micro" TextColor="Black" Grid.Row="3"></Label>
+            </StackLayout>
+
+        </Grid>
+        
+  </ContentView.Content>
+</ContentView>

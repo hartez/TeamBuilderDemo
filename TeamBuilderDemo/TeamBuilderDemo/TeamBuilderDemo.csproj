@@ -1,0 +1,124 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\angela.jpg" />
+    <None Remove="Images\ansel.jpg" />
+    <None Remove="Images\bart.jpg" />
+    <None Remove="Images\bill.jpg" />
+    <None Remove="Images\bill.png" />
+    <None Remove="Images\blur.jpg" />
+    <None Remove="Images\caity.jpg" />
+    <None Remove="Images\chuck.jpg" />
+    <None Remove="Images\doug.jpg" />
+    <None Remove="Images\harper.jpg" />
+    <None Remove="Images\hermes.jpg" />
+    <None Remove="Images\hubert.jpg" />
+    <None Remove="Images\lisa.jpg" />
+    <None Remove="Images\melissa.jpg" />
+    <None Remove="Images\napoleon.jpg" />
+    <None Remove="Images\phil.jpg" />
+    <None Remove="Images\robert.jpg" />
+    <None Remove="Images\roberta.jpg" />
+    <None Remove="Images\SKYPE15_Robert_001.jpg" />
+    <None Remove="Images\space0.jpg" />
+    <None Remove="Images\space1.jpg" />
+    <None Remove="Images\space2.jpg" />
+    <None Remove="Images\space3.jpg" />
+    <None Remove="Images\space4.jpg" />
+    <None Remove="Images\space5.jpg" />
+    <None Remove="Images\space6.jpg" />
+    <None Remove="Images\space7.jpg" />
+    <None Remove="Images\space8.jpg" />
+    <None Remove="Images\space9.jpg" />
+    <None Remove="Images\sydney.jpg" />
+    <None Remove="Images\victor.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\angela.jpg" />
+    <EmbeddedResource Include="Images\ansel.jpg" />
+    <EmbeddedResource Include="Images\bart.jpg" />
+    <EmbeddedResource Include="Images\bill.jpg" />
+    <EmbeddedResource Include="Images\blur.jpg" />
+    <EmbeddedResource Include="Images\caity.jpg" />
+    <EmbeddedResource Include="Images\chuck.jpg" />
+    <EmbeddedResource Include="Images\doug.jpg" />
+    <EmbeddedResource Include="Images\harper.jpg" />
+    <EmbeddedResource Include="Images\hermes.jpg" />
+    <EmbeddedResource Include="Images\hubert.jpg" />
+    <EmbeddedResource Include="Images\lisa.jpg" />
+    <EmbeddedResource Include="Images\melissa.jpg" />
+    <EmbeddedResource Include="Images\napoleon.jpg" />
+    <EmbeddedResource Include="Images\phil.jpg" />
+    <EmbeddedResource Include="Images\robert.jpg" />
+    <EmbeddedResource Include="Images\roberta.jpg" />
+    <EmbeddedResource Include="Images\space0.jpg" />
+    <EmbeddedResource Include="Images\space1.jpg" />
+    <EmbeddedResource Include="Images\space2.jpg" />
+    <EmbeddedResource Include="Images\space3.jpg" />
+    <EmbeddedResource Include="Images\space4.jpg" />
+    <EmbeddedResource Include="Images\space5.jpg" />
+    <EmbeddedResource Include="Images\space6.jpg" />
+    <EmbeddedResource Include="Images\space7.jpg" />
+    <EmbeddedResource Include="Images\space8.jpg" />
+    <EmbeddedResource Include="Images\space9.jpg" />
+    <EmbeddedResource Include="Images\sydney.jpg" />
+    <EmbeddedResource Include="Images\victor.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ProfessionalPage.xaml.cs">
+      <DependentUpon>ProfessionalPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Card.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SpaceCard.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SpacePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Start.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Card.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="ProfessionalPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="SpaceCard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="SpacePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Start.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+</Project>

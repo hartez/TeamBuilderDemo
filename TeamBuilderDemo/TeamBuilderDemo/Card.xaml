@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TeamBuilderDemo"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="TeamBuilderDemo.Card" BackgroundColor="Transparent">
+  <ContentView.Content>
+      <Frame VerticalOptions="Center" HorizontalOptions="Center" HasShadow="True" BackgroundColor="Transparent">
+
+        <Grid ColumnSpacing="0" RowSpacing="0" WidthRequest="300" HeightRequest="255">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"></RowDefinition>
+                <RowDefinition Height="150"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <BoxView Color="{StaticResource ThemeColor}" Margin="4,0,4,0" HorizontalOptions="Fill" VerticalOptions="Fill"></BoxView>
+
+            <Grid BackgroundColor="White" Grid.Row="1" Padding="20,20" RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <controls:CircleImage Source="{Binding ImageSource}" Grid.RowSpan="3" WidthRequest="85" HeightRequest="85" Aspect="AspectFill" />
+                
+                <Label Text="{Binding Name}" VerticalTextAlignment="End" FontSize="20" FontAttributes="Bold" TextColor="Black" Margin="10,0,0,0" Grid.Column="1" Grid.Row="0"></Label>
+                <Label Text="{Binding Title}" VerticalTextAlignment="Center" FontSize="16" TextColor="Black" Grid.Column="1" Margin="10,0,0,0" Grid.Row="1"></Label>
+                <Label Text="{Binding Location}" VerticalTextAlignment="Start" TextColor="LightGray" Grid.Column="1" Margin="10,0,0,0" Grid.Row="2"></Label>
+
+            </Grid>
+
+            <Grid Grid.Row="2" BackgroundColor="LightGray" Padding="20,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Text="{Binding Rate}" FontSize="24"  VerticalTextAlignment="End" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="0"></Label>
+                <Label Text="Hourly Rate" TextColor="DarkGray" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1"></Label>
+                
+                <Label Text="{Binding SuccessRate}" FontSize="24" VerticalTextAlignment="End" FontAttributes="Bold" TextColor="Black" Grid.Column="1" HorizontalTextAlignment="Center" Grid.Row="0"></Label>
+                <Label Text="Job Success" TextColor="DarkGray" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="1"></Label>
+
+                <Label Text="{Binding TotalEarned}" FontSize="24" VerticalTextAlignment="End" FontAttributes="Bold" TextColor="Black" Grid.Column="2" HorizontalTextAlignment="Center" Grid.Row="0"></Label>
+                <Label Text="Total Earned" LineBreakMode="WordWrap" TextColor="DarkGray" HorizontalTextAlignment="Center" Grid.Column="2" Grid.Row="1"></Label>
+
+            </Grid>
+
+        
+        </Grid>
+        
+    </Frame>
+  </ContentView.Content>
+</ContentView>

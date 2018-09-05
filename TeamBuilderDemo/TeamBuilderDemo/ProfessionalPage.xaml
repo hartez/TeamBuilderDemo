@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TeamBuilderDemo"
+             x:Class="TeamBuilderDemo.ProfessionalPage" 
+             BackgroundColor="White" Title="Find Professionals">
+
+    <ContentPage.Content>
+
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Image Source="{local:ImageResource TeamBuilderDemo.Images.blur.jpg}" Aspect="AspectFill" Grid.RowSpan="2" />
+
+            <BoxView Color="LightGray" Opacity="0.7" Grid.RowSpan="2" />
+
+            <StackLayout VerticalOptions="Center" Grid.RowSpan="1" IsClippedToBounds="False">
+            
+                <Label HorizontalOptions="Fill" HorizontalTextAlignment="Center" VerticalOptions="Fill"
+                       VerticalTextAlignment="Center"
+                       Text="Find the perfect professionals for your project." TextColor="Black"></Label>
+
+                <SearchBar HorizontalOptions="Center" BackgroundColor="White" TextColor="{StaticResource ThemeColor}" 
+                           PlaceholderColor="{StaticResource ThemeColor}" Placeholder="Search"></SearchBar>
+
+            </StackLayout>
+
+            <CarouselView x:Name="CarouselView" Grid.Row="1" Grid.RowSpan="2" Margin="0,0"></CarouselView>
+
+        </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>

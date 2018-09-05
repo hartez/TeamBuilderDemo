@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TeamBuilderDemo;assembly=TeamBuilderDemo"
+             x:Class="TeamBuilderDemo.Start" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+        
+            <Image Source="{local:ImageResource TeamBuilderDemo.Images.blur.jpg}" Aspect="AspectFill" />
+        
+            <BoxView Color="{StaticResource ThemeColor}" Opacity="0.7" />
+
+            <Label HorizontalOptions="Fill" HorizontalTextAlignment="Center" VerticalOptions="Fill"
+                   VerticalTextAlignment="Center"
+                   Text="Team Builder" TextColor="White" 
+                   FontSize="30" FontAttributes="Bold"></Label>
+
+            <StackLayout Grid.Row="1" Padding="30">
+                <Label Text="Welcome!" FontAttributes="Bold" Margin="0,0,0,10" HorizontalTextAlignment="Center" FontSize="18" ></Label>
+                <Label HorizontalTextAlignment="Center" VerticalOptions="Fill" LineBreakMode="WordWrap" Text="Start your search for the team which will help you launch your next big project below."></Label>
+                <Button Margin="0,20,0,0" BackgroundColor="{StaticResource ThemeColor}" TextColor="White" Text="Find Professionals" Clicked="ProfessionalsOnClick"></Button>
+                <Button Margin="0,20,0,0" BackgroundColor="{StaticResource ThemeColor}" TextColor="White" Text="Find Co-Working Spaces" Clicked="SpacesOnClick"></Button>
+            </StackLayout>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
