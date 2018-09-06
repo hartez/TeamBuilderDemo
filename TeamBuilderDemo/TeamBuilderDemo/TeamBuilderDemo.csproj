@@ -15,7 +15,6 @@
     <None Remove="Images\bart.jpg" />
     <None Remove="Images\bill.jpg" />
     <None Remove="Images\bill.png" />
-    <None Remove="Images\blur.jpg" />
     <None Remove="Images\caity.jpg" />
     <None Remove="Images\chuck.jpg" />
     <None Remove="Images\doug.jpg" />
@@ -47,6 +46,7 @@
     <None Remove="Images\space9.jpg" />
     <None Remove="Images\sydney.jpg" />
     <None Remove="Images\victor.jpg" />
+    <None Remove="Images\blur.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,7 +54,6 @@
     <EmbeddedResource Include="Images\ansel.jpg" />
     <EmbeddedResource Include="Images\bart.jpg" />
     <EmbeddedResource Include="Images\bill.jpg" />
-    <EmbeddedResource Include="Images\blur.jpg" />
     <EmbeddedResource Include="Images\caity.jpg" />
     <EmbeddedResource Include="Images\chuck.jpg" />
     <EmbeddedResource Include="Images\doug.jpg" />
@@ -85,6 +84,7 @@
     <EmbeddedResource Include="Images\space9.jpg" />
     <EmbeddedResource Include="Images\sydney.jpg" />
     <EmbeddedResource Include="Images\victor.jpg" />
+    <EmbeddedResource Include="Images\blur.jpg" />
   </ItemGroup>
 
   <ItemGroup>
