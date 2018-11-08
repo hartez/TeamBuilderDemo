@@ -10,10 +10,21 @@
             <Label HorizontalOptions="Fill" HorizontalTextAlignment="Center" 
                    Text="Find the perfect space for your project." TextColor="{StaticResource ThemeColor}"></Label>
 
-            <SearchBar HorizontalOptions="Center" BackgroundColor="White" TextColor="{StaticResource ThemeColor}" 
+            <SearchBar x:Name="Search" HorizontalOptions="Center" BackgroundColor="White" TextColor="{StaticResource ThemeColor}" 
                        PlaceholderColor="{StaticResource ThemeColor}" Placeholder="Search"></SearchBar>
 
-            <CollectionView x:Name="Spaces" Margin="0,5,0,0"></CollectionView>
+            <CollectionView x:Name="Spaces" Margin="0,5,0,0">
+                <CollectionView.EmptyView>
+                    <StackLayout> 
+                        <Label FontAttributes="Bold" FontSize="18" Margin="10,25,10,10"
+                               HorizontalOptions="Fill" HorizontalTextAlignment="Center" 
+                               Text="No results matched your filter."></Label>
+                        <Label FontAttributes="Italic" FontSize="12" 
+                               HorizontalOptions="Fill" HorizontalTextAlignment="Center"
+                               Text="Maybe try a broader filter?"></Label>
+                    </StackLayout>
+                </CollectionView.EmptyView>
+            </CollectionView>
 
         </StackLayout>
 

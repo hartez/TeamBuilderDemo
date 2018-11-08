@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,11 +13,14 @@ namespace TeamBuilderDemo
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SpacePage : ContentPage
 	{
-		public SpacePage ()
+        private List<SpaceViewModel> _items;
+        public ObservableCollection<SpaceViewModel> SpacesData { get; }
+
+        public SpacePage ()
 		{
 			InitializeComponent ();
 
-            var items = new List<SpaceViewModel>
+            _items = new List<SpaceViewModel>
             {
                 new SpaceViewModel("Regis Workspaces", "$339/mo", "187", "4.9", "space0"),
                 new SpaceViewModel("Cowork Revolution", "$12,885/yr", "245", "3.5", "space1"),
@@ -41,10 +45,41 @@ namespace TeamBuilderDemo
                 SnapPointsAlignment = SnapPointsAlignment.Start,
                 SnapPointsType = SnapPointsType.Mandatory
             };
-            
 
             Spaces.ItemTemplate = new DataTemplate(() => new SpaceCard());
-            Spaces.ItemsSource = items;
+            SpacesData = new ObservableCollection<SpaceViewModel>(_items);
+            Spaces.ItemsSource = SpacesData;
+
+            Search.SearchCommand = new Command(() => FilterItems(Search.Text));
+            Search.TextChanged += Search_TextChanged;
+        }
+
+        private void Search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (e.NewTextValue == string.Empty)
+            {
+                FilterItems(string.Empty);
+            }
+        }
+
+        public void FilterItems(string filter)
+        {
+            var filteredItems = _items.Where(item => item.Name.ToLower().Contains(filter.ToLower())).ToList();
+
+            foreach (SpaceViewModel collectionViewGalleryTestItem in _items)
+            {
+                if (!filteredItems.Contains(collectionViewGalleryTestItem))
+                {
+                    SpacesData.Remove(collectionViewGalleryTestItem);
+                }
+                else
+                {
+                    if (!SpacesData.Contains(collectionViewGalleryTestItem))
+                    {
+                        SpacesData.Add(collectionViewGalleryTestItem);
+                    }
+                }
+            }
         }
 	}
 }
